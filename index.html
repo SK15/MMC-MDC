@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=320, user-scalable=no">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>MMC e MDC</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript">var nbrs = new Array(), res = new Array(), mimDiv = 2, maxDiv = 0, total = 0, mmc = 1, mdc = 1, maxNbr = 20, maxLen = 3, appLang = 1, setLangOK = false;</script>
+  <script type="text/javascript" charset="utf-8" src="js/langs.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/suport.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/divisor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
+  <script type="text/javascript">
+  document.addEventListener("deviceready", setLang, true);
+  document.addEventListener("backbutton", function() { mosync.app.exit(); }, true);
+  </script>
+ </head>
+<body>
+
+<div id="screen">
+ <div class="pane" id="heading">
+  <div class="left"><img src="images/calculator.png" width="28" height="30" border="0" alt="" /></div>
+  <div id="L0" class="midle"></div>
+  <div class="right"><img src="images/reload.png" width="26" height="30" border="0" onclick="javascript:reStart();" alt="" /></div>
+  <br clear="all" />
+ </div>
+ <div align="center">
+  <!-- Pede os Números -->
+  <div id="part1" style="display: ;">
+   <div class="pane" id="info">
+    <div id="L1" class="infoItem"></div>
+    <form action="#" method="post">
+     <input type="number" min="1" max="999" step="0" name="f1" id="f1" value="2" class="quantnbr" onkeyup="javascript:noZero(this); onlyNumber(this);" onkeypress="javascript:return limitNumber(this);" />
+    </form>
+   </div>
+   <div align="center" class="pane button" onclick="javascript:getInputs();">
+    <table border="0" cellspacing="0" cellpadding="0">
+     <tr>
+      <td id="L2"></td>
+      <td>&nbsp;&nbsp;<img src="images/next.png" width="32" height="20" border="0" alt="" /></td>
+     </tr>
+    </table>
+   </div>
+  </div>
+  <!-- Pede os Números / Resutados -->
+  <div id="part2" style="display: none;"></div>
+  <!-- Resultados -->
+ </div>
+</div>
+
+</body>
+</html>
